@@ -32,7 +32,7 @@ module.exports = function (grunt) {
     }, //sass
     autoprefixer: {
       options: {
-        browsers: ['last 2 versions', 'ie >= 8'], //change as needd
+        browsers: ['last 2 versions', 'ie >= 8'], //change as needed
         map: true
       },
       dev: {
