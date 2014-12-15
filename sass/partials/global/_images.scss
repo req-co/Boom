@@ -1,0 +1,20 @@
+img {
+	max-width: 100% !important;
+	height: auto !important;
+
+	&[style*="float:left"] { //when IMCE adds its stupid inline styling for floats, we add margins
+		margin-right: 1em;
+		margin-bottom: 1em;
+	}
+
+	&[style*="float:right"] { //ditto
+		margin-left: 1em;
+		margin-bottom: 1em;
+	}
+}
+
+@media \0screen { //Prevent height distortion in IE8. 
+	img {
+		width: auto;
+	} 
+}

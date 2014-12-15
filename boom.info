@@ -1,0 +1,48 @@
+name = Boom
+description = Starter theme by Abby Milberg.
+screenshot = screenshot.png
+version = 1.0-beta
+engine = phptemplate
+core = 7.x
+
+; ========================================
+; Stylesheets
+; ========================================
+stylesheets[all][] = stylesheets/style.css
+
+; ========================================
+; Scripts
+; ========================================
+scripts[] = js/boom-functions.js
+
+; ========================================
+; Regions
+; ========================================
+regions[content] = Content
+
+; ========================================
+; Features
+; ========================================
+; Blah I want to figure out a way to turn off logo and favicon too but for now it's spitting an error every time I try and I don't have time to fight with it.
+features[] = logo
+;features[] = name
+;features[] = slogan
+;features[] = node_user_picture
+;features[] = comment_user_picture
+;features[] = comment_user_verification
+features[] = favicon
+;features[] = main_menu
+;features[] = secondary_menu
+
+; ========================================
+; Settings
+; ========================================
+settings[toggle_logo] = 0
+settings[toggle_name] = 0
+settings[toggle_slogan] = 0
+settings[toggle_node_user_picture] = 0
+settings[toggle_comment_user_picture] = 0
+settings[toggle_comment_user_verification] = 0
+settings[toggle_favicon] = 0
+settings[toggle_main_menu] = 0
+settings[toggle_secondary_menu] = 0

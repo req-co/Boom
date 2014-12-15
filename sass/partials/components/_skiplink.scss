@@ -1,0 +1,19 @@
+.skip-link {
+	@extend %visuallyhidden;
+
+	&:focus {
+		@extend %bold;
+		position: static;
+		display: block;
+		width: 100%;
+		padding-top: .5em;
+		padding-bottom: .5em;
+		clip: auto; 
+		height: auto; 
+		overflow: visible;
+		margin: auto; 
+		text-align: center;
+		text-transform: uppercase;
+		color: white;
+	}
+}

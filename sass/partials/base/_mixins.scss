@@ -1,0 +1,35 @@
+@mixin fontsize($number) {
+	font-size: $number + px; //this line can be commented out if we're not supporting IE8
+	font-size: $number/$base-font-size + rem;
+}
+
+@mixin gradient-hor($color1, $color2) {
+	background: $color2; //fallback; it could just as easily be $color1
+	background: linear-gradient(to bottom,  $color1 0%,$color2 100%); //god bless autoprefixer
+}
+
+@mixin gradient-vert($color1, $color2) {
+	background: $color2; //fallback; it could just as easily be $color1
+	background: linear-gradient(to right,  $color1 0%,$color2 100%);
+}
+
+@mixin transform($var) {
+	transform: $var;
+}
+
+@mixin transition($var: all .3s ease) {
+	transition: $var;
+}
+
+@mixin breakpoint($bp, $no-query: false) {
+//DO NOT MESS WITH THIS (well, unless you're not supporting IE8 AND you know what you're doing)
+//Props to Mason Wendell for writing a WAY more awesome version of this which, alas, is overkill for most of my projects and was the only reason I was still tied to Compass
+	@media (min-width: #{$bp}) {
+		@content;
+	}
+	@if $no-query != false {
+		#{$no-query} & {
+			@content;
+		}
+	}
+}

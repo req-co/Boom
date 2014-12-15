@@ -1,0 +1,208 @@
+// @font-face { //icon fonts FTW
+// 	font-family: 'icon';
+// 	src:url('../fonts/icon.eot');
+// 	src:url('../fonts/icon.eot?#iefix') format('embedded-opentype'),
+// 			url('../fonts/icon.woff') format('woff'),
+// 			url('../fonts/icon.ttf') format('truetype'),
+// 			url('../fonts/icon.svg#icon') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+html {
+	font-size: ($base-font-size/16) * 100%;
+	//line-height:1.4; //this can change
+}
+
+body {
+	@extend %sans-serif; 
+	// color:$text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	// margin-bottom: .5em;
+	// @extend %bold;
+}
+
+#page-title { //most h1s, except the logo on the homepage
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+b,
+strong {
+	@extend %bold;
+}
+
+i,
+em {
+	@extend %italic;
+}
+
+blockquote {
+	
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+small {
+	
+}
+
+sup {
+	position: relative;
+	font-size: .8em;
+	top: -.2em;
+}
+
+sub {
+	position: relative;
+	font-size: .8em;
+	top: .2em;
+}
+
+*:focus {
+	outline: none; //undoing the ugly blue glow that defaults when you focus on a link or anything with a tabindex
+}
+
+a {
+
+	&:hover,
+	&:focus {
+
+	}
+
+	&:focus { //keyboard nav only
+		//something about an outline usually
+	}
+}
+
+ul,
+ol { //unifying them so the spacing all stays consistent and for DRY purposes
+	.field--name-body & { //this saves me having to override it for all the menus, etc.
+		padding-left: 3em;
+		margin-bottom: 1em;
+
+		li {
+			list-style-type: none; //we remove the list style and then add back in with :befores so that we can style numbers and bullets
+			margin-bottom: 1em;
+
+			&:before {
+				margin-left: -1.5em;
+				position: absolute;
+				//color: $accent-cool-light; 
+			}
+
+			ul,
+			ol {
+				margin-top: 1em;
+				padding-left: 2em; //the spacing shouldn't be as drastic the second level deep
+			}
+		} //li
+	} //field--name-body &
+} //ol, ul
+
+ul {
+	.field--name-body & {
+		li {
+			&:before {
+				content: '\2022'; //bullets
+			}
+		}
+	}
+} //ul
+
+ol {
+	.field--name-body & {
+		counter-reset: li;
+
+		li {
+			&:before {
+				content: counter(li)')'; //numbers
+				counter-increment: li;
+			}
+		}
+
+		ul li { //don't let uls nested inside ols keep acting like ols
+			&:before {
+				content: '\2022';
+				counter-increment: none;
+			}
+		}
+	} //field--name-body &
+} //ol
+
+dt {
+
+}
+
+dd {
+	
+}
+
+// .pager{
+// 	li{
+// 		margin:0;
+// 		padding:0;
+// 		@include inline;
+// 		@include fontsize(16);
+// 		margin-right:$small-gap/4;
+
+// 		&:before{
+// 			content:''; //no bullets
+// 		}
+
+// 		&.pager__item--current{
+// 			padding:$small-gap/4 $small-gap*3/4;
+// 			color:$white;
+// 			background-color:$primary-light;
+// 		}
+
+// 		a{
+// 			display:block;
+// 			padding:$small-gap/4 $small-gap*3/4;
+// 			text-decoration:none;
+// 			color:$text-color;
+
+// 			&:hover,
+// 			&:focus{
+// 				background-color:$secondary;
+// 				color:$white;
+// 			}
+// 		} //a
+// 	} //li
+// } //pager
+
+.visuallyhidden {
+	@extend %visuallyhidden;
+}
+
+.clearfix {
+	@extend %clearfix;
+}

@@ -1,0 +1,13 @@
+//fun stuff to alert people when they've done something inexcusable in terms of markup, teehee
+//this should not be included in production builds :(
+
+font,
+.node__content h1 {
+	&:after {
+		content: 'BAD MARKUP ALERT!!!';
+		font-size: 72px;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: red;
+	}
+}

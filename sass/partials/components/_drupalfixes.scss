@@ -1,0 +1,66 @@
+.contextual-links-wrapper { //we break them all the time, so now we fix them
+	ul {
+		position: absolute;
+
+		li {
+			display: block !important;
+			width: auto !important;
+
+			a {
+				text-transform: none !important;
+				font-weight: normal;
+				background-color: transparent !important;
+				border: none !important;
+
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+					background-color: transparent !important;
+				}
+			}
+		}
+	}
+}
+
+#admin-menu { //admin menu links font weight reset and z-indexing
+	z-index: 525600; //oh I crack myself up with completely random pop culture references
+
+	a {
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
+}
+
+#magic-viewport-indicator {
+	line-height: 1;
+}
+
+.block--blockify-blockify-tabs {
+	.not-logged-in & {
+		display: none !important;
+	}
+}
+
+.tabs {
+	@extend %clearfix;
+	border-bottom: solid 2px #999;
+	margin-bottom: 1em;
+
+	li {
+		float: left;
+		margin-right: 2px;
+		margin-bottom: 0;
+
+		a {
+			display: block;
+			padding: .5em 1em;
+			background-color: #999;
+			color: #fff;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				background-color: #333;
+			}
+		} //a
+	} //li
+} //tabs
