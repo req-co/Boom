@@ -26,3 +26,10 @@ To Do
 * Create a "starter" icon font of frequently used icons (Facebook, Twitter, arrows, etc.)
 * Add matchHeight.js
 * Add formalize.js
+
+Random Notes
+============
+
+* We usually use the Drupal jQuery Update module to change public pages to v. 1.7 and leave admin pages alone
+* We pretty much always use the following Modernizr tests: mediaqueries (non-core), touch, rgba, csstransforms (2d), svg, plus printshiv
+* We also use these Modernizr tests a lot: csscalc (non-core), cssanimations, csstransitions, others as needed
