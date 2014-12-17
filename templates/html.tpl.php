@@ -7,7 +7,7 @@
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>
-<body<?php print $attributes;?>>
+<body class="<?php print $classes; ?>">
 
   <?php print $page_top; ?>
   <a href="#main" class="skip-link" id="skip-to-main"><?php print t('Skip to main content'); ?></a>
