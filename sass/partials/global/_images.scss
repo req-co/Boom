@@ -5,6 +5,7 @@ img {
 	&[style*="float:left"] { //when IMCE adds its stupid inline styling for floats, we add margins
 		margin-right: 1em;
 		margin-bottom: 1em;
+		//possibly add something here like max-width 50% !important BELOW a certain breakpoint
 	}
 
 	&[style*="float:right"] { //ditto

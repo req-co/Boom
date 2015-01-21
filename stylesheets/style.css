@@ -228,12 +228,4 @@ ol {
     height: 100%;
     width: 100%; }
 
-font:after,
-.node__content h1:after {
-  content: 'BAD MARKUP ALERT!!!';
-  font-size: 72px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: red; }
-
 /*# sourceMappingURL=style.css.map */

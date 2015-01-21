@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         }
       },
       styles: {
-        files: ['stylesheets/style--no-prefix.css'],
+        files: ['sass/{,**/}*.scss'],
         tasks: ['autoprefixer:dev']
       },
       js: {
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
           compass: false
         },
         files: {
-          'stylesheets/style--no-prefix.css': 'sass/style.scss'
+          'stylesheets/style.css': 'sass/style.scss'
         }
       }
     }, //sass
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
       },
       dev: {
         files: {
-          'stylesheets/style.css' : 'stylesheets/style--no-prefix.css'
+          'stylesheets/style.css' : 'stylesheets/style.css'
         }
       }
     }, //autoprefixer
