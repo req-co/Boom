@@ -12,7 +12,12 @@ textarea{
 
   &[type="checkbox"]{
     -webkit-appearance:checkbox;
-    background-color:transparent;
+    width: auto;
+  } //checkbox
+
+  &[type="radio"] {
+    -webkit-appearance: radio;
+    width: auto;
   } //checkbox
 
   &:active{
@@ -24,8 +29,12 @@ textarea{
   }
 } //input
 
+select {
+  
+}
 
-input[type="submit"]{
+input[type="submit"],
+button {
   //probably extend a button thing here
 } //submit
 

@@ -114,6 +114,9 @@ em {
       .tabs li a:hover, .tabs li a:focus {
         background-color: #333; }
 
+.ajax-progress-throbber {
+  display: none !important; }
+
 .skip-link:focus {
   position: static;
   display: block;
@@ -140,7 +143,11 @@ textarea {
   input[type="checkbox"],
   textarea[type="checkbox"] {
     -webkit-appearance: checkbox;
-    background-color: transparent; }
+    width: auto; }
+  input[type="radio"],
+  textarea[type="radio"] {
+    -webkit-appearance: radio;
+    width: auto; }
 
 label {
   display: block; }
