@@ -21,15 +21,49 @@
 	transition: $var;
 }
 
-@mixin breakpoint($bp, $no-query: false) {
-//DO NOT MESS WITH THIS (well, unless you're not supporting IE8 AND you know what you're doing)
-//Props to Mason Wendell for writing a WAY more awesome version of this which, alas, is overkill for most of my projects and was the only reason I was still tied to Compass
-	@media (min-width: #{$bp}) {
-		@content;
-	}
-	@if $no-query != false {
-		#{$no-query} & {
-			@content;
-		}
-	}
-}
+// Below are two mixins for breakpoints. The second (with $no-ie) mixin is currently untested.
+
+// @mixin breakpoint($bp, $no-query: false) {
+//   @media (min-width: #{$bp}) {
+//     @content;
+//   }
+//   @if $no-query != false {
+//     #{$no-query} & {
+//       @content;
+//     }
+//   }
+// }
+
+/**
+ *
+ * This method returns the content wrapped in the requested media query. It also checks to see if
+ * the no-query variable has been defined. If the variable exists the content is output and wrapped
+ * in a class as defined by the variable.
+ *
+ * The $no-query defined class is to wrap content in when there are no media queries available for
+ * the current browser. This is typically provided by a javascript plugin like modernizr.
+ *
+ * $bp: The breakpoint in pixels
+ *
+ * $no-ie: To override this breakpoint and not use it in browsers that don't support media queries
+ * pass true as the second argument.
+ *
+ */
+// @mixin breakpoint($bp, $no-ie: false) {
+
+//   // Pass the given content and wrap it in a min-width media query
+//   @media (min-width: #{$bp}) {
+//     // The content contained within the call to our mixin
+//     @content;
+//   }
+
+//   // Check to see if we have defined the no-query variable
+//   @if variable-exists(no-query) and $no-ie == false {
+//     // If media queries are not available we wrap the content in this class
+//     #{$no-query} & {
+//       // The content contained within the call to our mixin
+//       @content;
+//     }
+//   }
+
+// }
