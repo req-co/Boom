@@ -8,6 +8,23 @@
 	font-size: $number/$base-font-size + rem;
 }
 
+@mixin placeholder($c-placeholder: '#888888') {
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    color: $c-placeholder;
+  }
+
+  input:-moz-placeholder,
+  textarea:-moz-placeholder {
+    color: $c-placeholder;
+  }
+
+  input.placeholder_text,
+  textarea.placeholder_text {
+    color: $c-placeholder;
+  }
+}
+
 @mixin gradient-hor($color1, $color2) {
 	background: $color2; //fallback; it could just as easily be $color1
 	background: linear-gradient(to bottom,  $color1 0%,$color2 100%); //god bless autoprefixer
