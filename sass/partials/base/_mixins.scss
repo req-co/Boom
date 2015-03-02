@@ -1,3 +1,8 @@
+@mixin svg-bg($name, $extension: png, $color: transparent, $position: 0 0, $repeat: no-repeat) {
+  background: url(../images/#{$name}.#{$extension}) $color $position $repeat;
+  background: none, url(../images/#{$name}.svg) $color $position $repeat;
+}
+
 @mixin fontsize($number) {
 	font-size: $number + px; //this line can be commented out if we're not supporting IE8
 	font-size: $number/$base-font-size + rem;
