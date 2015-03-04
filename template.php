@@ -9,6 +9,9 @@ function boom_css_alter(&$css) {
 function boom_preprocess_html(&$vars) {
   //dsm($vars);
 
+  //to add a Google Fonts stylesheet - replace the URL
+  //drupal_add_css('http://fonts.googleapis.com/css?family=News+Cycle', array('type' => 'external'));
+
   //removes less than helpful no-sidebars class that is hard coded into drupal
   $vars['classes_array'][3] = '';
 
