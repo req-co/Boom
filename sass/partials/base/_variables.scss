@@ -1,24 +1,21 @@
-//Colors
-//follow this pattern. etc. etc.
-// $c-text-color: #111;
-// $c-black: #000;
-// $c-white: #fff;
-// $c-warm: #f00;
+// Colors
+$c-black: #000000;
+$c-white: #ffffff;
 
-//Base Font Size
-$base-font-size: 16; //change this to whatever size (in px) most of the body copy in your project is
+// Base Font Size
+$base-font-size: 16;
 
-//Time out for a function
+// Function to convert pixels to ems
 @function px-to-em($px, $denominator: $base-font-size) {
   @return $px / $denominator * 1em;
 }
 
-//Breakpoints
-// $bp-tiny: px-to-em(500);
-// $bp-small: px-to-em(768);
-// $bp-med: px-to-em(1060);
+// Breakpoints
+$bp-tiny: px-to-em(500);
+$bp-small: px-to-em(768);
+$bp-med: px-to-em(1024);
 
-// The max-width of the stage on full desktop
-//$max-stage-width: px-to-em(1160);
+// The max-width of the stage on full desktop in pixels (see mixin stagecenter)
+$max-stage-width: 1024;
 
-$no-query: '.no-mediaqueries'; //don't mess with this; it works with Modernizr
+$no-query: '.no-mediaqueries';
