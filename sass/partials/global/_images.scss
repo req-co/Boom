@@ -1,21 +1,25 @@
 img {
-	max-width: 100% !important;
-	height: auto !important;
+  // max-width: 100% !important;
+  // height: auto !important;
+  max-width: 100%;
+  height: auto;
 
-	&[style*="float:left"] { //when IMCE adds its stupid inline styling for floats, we add margins
-		margin-right: 1em;
-		margin-bottom: 1em;
-		//possibly add something here like max-width 50% !important BELOW a certain breakpoint
-	}
 
-	&[style*="float:right"] { //ditto
-		margin-left: 1em;
-		margin-bottom: 1em;
-	}
+  //when IMCE adds inline styling for floats, add margins
+  &[style*="float:left"] {
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+
+  //when IMCE adds inline styling for floats, add margins
+  &[style*="float:right"] {
+    margin-left: 1em;
+    margin-bottom: 1em;
+  }
 }
 
-@media \0screen { //Prevent height distortion in IE8. 
-	img {
-		width: auto;
-	} 
-}
+// @media \0screen { //Prevent height distortion in IE8.
+//   img {
+//     width: auto;
+//   }
+// }
