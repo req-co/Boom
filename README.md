@@ -6,6 +6,12 @@ Starter theme for Drupal 7
 To Use
 ======
 
+* Copy files to new theme folder
+  - do not copy the directory so we don't accidentally bring over the git repo
+* Rename boom.info
+* Rename boom-functions.js
+* Search and replace boom with your theme name
+
 * You will need Node, Grunt, and Bundler
 * From the command line, cd into the folder
 * Run "npm install"
