@@ -14,7 +14,7 @@ stylesheets[all][] = stylesheets/style.css
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = js/vendor/matchHeight-min.js
+scripts[] = js/vendor/jquery.matchHeight-min.js
 scripts[] = js/vendor/modernizr.min.js
 scripts[] = js/vendor/jquery.formalize.js
 scripts[] = js/boom-functions.js
