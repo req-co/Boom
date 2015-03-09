@@ -1,4 +1,4 @@
-%clearfix{
+%clearfix {
   &:before,
   &:after {
     content: "";
@@ -10,17 +10,46 @@
   }
 }
 
-%visuallyhidden{
-  border: 0; 
-  clip: rect(0 0 0 0); 
-  height: 1px; 
-  margin: -1px; 
-  overflow: hidden; 
-  padding: 0; 
-  position: absolute; 
+%visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
   width: 1px;
 }
 
+//
+// Fonts
+//
+%sans-serif {
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+%serif {
+  font-family: 'Georgia', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+//
+// Font Styling
+//
+%bold {
+  font-weight: 900;
+}
+
+%italic {
+  font-style: italic;
+}
+
+//
+// Icons
+//
 %icon {
   font-family: 'icon'; //declared in the typography partial
   font-style: normal;
@@ -30,32 +59,4 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   speak: none;
-}
-
-%sans-serif {
-  font-family: 'Arial', sans-serif;
-  // font-weight: 400;
-  // -webkit-font-smoothing: antialiased;
-}
-
-//maybe set a serif one if needed
-
-%bold {
-  font-weight: bold; //use a number yo
-}
-
-//might also need light, black, whatever
-
-%italic {
-  font-style: italic;
-}
-
-%no-bullets { //any time I need to override my fancy bullets; should be applied to a <ul>
-  padding-left: 0 !important; //specificity is frequently an issue
-
-  li {
-    &:before {
-      content:' ' !important; //specificity again
-    }
-  }
 }
