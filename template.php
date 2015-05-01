@@ -32,7 +32,7 @@ function boom_preprocess_page(&$vars) {
 
 }
 
-function counterculture_preprocess_image(&$variables) {
+function boom_preprocess_image(&$variables) {
   // Do not allow drupal to set width and height on images
   unset($variables['width'], $variables['height'], $variables['attributes']['width'], $variables['attributes']['height']);
 }
