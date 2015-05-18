@@ -1,4 +1,4 @@
-(function ($) { Drupal.behaviors.bayer = { attach: function (context, settings) {
+(function ($) { Drupal.behaviors.boom = { attach: function (context, settings) {
 // Start Drupal Behaviors
 
   console.log('jQuery ' + $().jquery + ' is firing.');
