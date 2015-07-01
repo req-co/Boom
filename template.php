@@ -37,6 +37,25 @@ function boom_preprocess_image(&$variables) {
   unset($variables['width'], $variables['height'], $variables['attributes']['width'], $variables['attributes']['height']);
 }
 
+function boom_menu_link(array $variables) {
+  $element = $variables ['element'];
+  $sub_menu = '';
+  $title = '<span>' . $element['#title'] . '</span>';
+  $plainTitle = str_replace(' ','-', $element['#title']);
+  $element['#attributes']['class'][] = 'menu-' . strtolower($plainTitle);
+
+  $options = $element['#localized_options'];
+
+  if ($element ['#below']) {
+    $sub_menu = drupal_render($element ['#below']);
+  }
+
+  $options['html'] = 'TRUE';
+
+  $output = l($title, $element ['#href'], $options);
+  return '<li' . drupal_attributes($element ['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
 // function boom_preprocess_node(&$vars) {
 //   //dsm($vars);
 // }
