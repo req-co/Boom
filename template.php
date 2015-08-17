@@ -41,7 +41,7 @@ function boom_menu_link(array $variables) {
   $element = $variables ['element'];
   $sub_menu = '';
   $title = '<span>' . $element['#title'] . '</span>';
-  $plainTitle = str_replace(' ','-', $element['#title']);
+  $plainTitle = drupal_html_class($element['#title']);
   $element['#attributes']['class'][] = 'menu-' . strtolower($plainTitle);
 
   $options = $element['#localized_options'];
