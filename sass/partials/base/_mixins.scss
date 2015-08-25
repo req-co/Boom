@@ -54,6 +54,76 @@
 
 /**
  *
+ * Take any drupal view formatted as Unformatted or HTML List and apply a 3 column grid layout
+ *
+ * $wrapper-name: The immediate div name above view-content and views-row
+ *
+ * $number-rows: The number of rows in the grid, multiply by 3 for total number of items
+ *
+ * Future Plans:
+ * Make a variable column version
+ *
+ */
+@mixin gridify($wrapper-name, $number-rows: 30) {
+  #{$wrapper-name} {
+    @extend %clearfix;
+    clear: both;
+    width: 100%;
+  }
+  #{$wrapper-name} .views-row {
+    float: left;
+    margin-bottom: 2em;
+    width: 31%;
+    vertical-align: top;
+
+    .item-list li.views-row {
+      margin-left: 0;
+      margin-bottom: 5px;
+    }
+
+    .item-list ul li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .item-list {
+      margin-right: 0;
+    }
+  }
+
+  #{$wrapper-name} .views-row {
+    margin-right: 2%;
+  }
+
+  #{$wrapper-name} .views-row-even {
+    margin-right: 2%;
+  }
+
+  #{$wrapper-name} .views-row-odd {
+    clear: none;
+  }
+
+  $loop-rows: $number-rows;
+  $last-row: 1;
+  @for $i from 1 through $loop-rows {
+    @if $i % 3 == 0 {
+      #{$wrapper-name} .views-row-#{$i} {
+        margin-right: 0;
+      }
+    }
+
+    @if $i == $last-row {
+      $last-row: $last-row + 3;
+      #{$wrapper-name} .views-row-#{$i} {
+        clear: left;
+      }
+    }
+  }
+
+}
+
+/**
+ *
  * This method returns the content wrapped in the requested media query. It also checks to see if
  * the no-query variable has been defined. If the variable exists the content is output and wrapped
  * in a class as defined by the variable.
