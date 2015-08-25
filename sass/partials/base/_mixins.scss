@@ -58,13 +58,13 @@
  *
  * $wrapper-name: The immediate div name above view-content and views-row
  *
- * $number-rows: The number of rows in the grid, multiply by 3 for total number of items
+ * $number-items: The number of items in the grid
  *
  * Future Plans:
  * Make a variable column version
  *
  */
-@mixin gridify($wrapper-name, $number-rows: 30) {
+@mixin gridify($wrapper-name, $number-items: 30) {
   #{$wrapper-name} {
     @extend %clearfix;
     clear: both;
@@ -103,7 +103,7 @@
     clear: none;
   }
 
-  $loop-rows: $number-rows;
+  $loop-rows: $number-items;
   $last-row: 1;
   @for $i from 1 through $loop-rows {
     @if $i % 3 == 0 {
