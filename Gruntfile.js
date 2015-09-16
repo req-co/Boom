@@ -23,7 +23,9 @@ module.exports = function (grunt) {
     sass: {
       dev: {
         options: {
-          compass: false
+          compass: false,
+          style: 'expanded',
+          require: 'susy'
         },
         files: {
           'stylesheets/style.css': 'sass/style.scss'

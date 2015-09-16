@@ -20,12 +20,13 @@ To Use
 > This theme is meant to serve as a starting point to build from rather than a parent theme to be used in child or sub theme building
 
 ---
-
--  You will need Node, Grunt, and Bundler
+-  You will need Node, Grunt, Susy, and Bundler
 -  From the command line, cd into your new theme folder
 -  Run "npm install"
 -  Run "bundle install"
 -  Run "npm update caniuse-db"
+- Run "gem install susy" *you might need to sudo this command
+
 -  Run "grunt watch"
 -  To stop watching, use Ctrl+C
 
