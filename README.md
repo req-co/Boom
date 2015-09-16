@@ -1,4 +1,4 @@
-Boom
+Boom.jess
 ====
 
 Starter theme for Drupal 7
