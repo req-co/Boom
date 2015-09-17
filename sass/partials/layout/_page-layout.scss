@@ -1,0 +1,18 @@
+  *{
+    box-sizing: border-box;
+  }
+
+body {
+  @include fontsize (16px);
+  @extend %sans-serif;
+}
+
+.container {
+  @include container($mobile);
+    height: 100%;
+    text-align: center;
+
+@include breakpoint ($bp-small) {
+  @include container(1280px);  
+  }//bp tiny
+}   //container
