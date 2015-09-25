@@ -5,10 +5,34 @@
 </header>
 
 <main class="main" id="main" role="main">
-  <div class="main-content">
-    <?php print $messages; ?>
-    <?php print render($page['content']); ?>
+
+  <div class="main-content-wrapper">
+
+    <div class="main-content">
+
+      <?php if ($title && !$is_front): ?>
+        <h1 class="title" id="page-title">
+          <?php print $title; ?>
+        </h1>
+      <?php endif; ?>
+
+      <?php if ($messages): ?>
+        <div id="messages">
+          <div class="clearfix">
+            <?php print $messages; ?>
+          </div>
+        </div>
+      <?php endif; ?>
+
+      <?php if ($tabs && !$is_front): ?>
+        <?php print render($tabs); ?>
+      <?php endif; ?>
+
+      <?php print render($page['content']); ?>
+    </div>
+
   </div>
+
 </main>
 
 <footer class="footer" id="footer" role="footer">

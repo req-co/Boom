@@ -1,3 +1,5 @@
+'use strict';
+
 (function ($) { Drupal.behaviors.boom = { attach: function (context, settings) {
 // Start Drupal Behaviors
 

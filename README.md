@@ -1,7 +1,7 @@
-Boom
+boom
 ====
 
-Starter theme for Drupal 7
+Drupal 7 Starter Theme by RepEquity
 
 To Use
 ======
@@ -9,7 +9,6 @@ To Use
 - Copy files to new theme folder
 	- do not copy the directory so we don't accidentally bring over the git repo
 - Rename boom.info
-- Rename boom-functions.js
 - Search and replace boom with your theme name
 - Rename the theme folder to your custom theme name
   - theme names should get a year suffix
@@ -21,17 +20,15 @@ To Use
 
 ---
 
--  You will need Node, Grunt, and Bundler
+-  You will need Node, Gulp, and Bundler
 -  From the command line, cd into your new theme folder
--  Run "npm install"
--  Run "bundle install"
+-  Run "sudo bundle install"
+-  Run "sudo bundle update"
+-  Run "sudo npm install"
 -  Run "npm update caniuse-db"
--  Run "grunt watch"
+-  Run "gulp"
 -  To stop watching, use Ctrl+C
-
 
 Random Notes
 ============
 
-* Common Modernizr tests: mediaqueries (non-core), touch, rgba, csstransforms (2d), svg, plus printshiv
-* Frequently used Modernizr tests: csscalc (non-core), cssanimations, csstransitions

@@ -1,5 +1,5 @@
 name = Boom
-description = D7 starter theme by RepEquity.
+description = Drupal 7 Starter Theme by RepEquity.
 screenshot = screenshot.png
 version = 1.0-beta
 engine = phptemplate
@@ -14,17 +14,17 @@ stylesheets[all][] = stylesheets/style.css
 ; ========================================
 ; Scripts
 ; ========================================
-scripts[] = js/vendor/jquery.matchHeight-min.js
 scripts[] = js/vendor/modernizr.min.js
 scripts[] = js/vendor/jquery.formalize.js
-scripts[] = js/boom-functions.js
+scripts[] = js/vendor/jquery.matchHeight-min.js
+scripts[] = js/javascript.js
 
 ; ========================================
 ; Regions
 ; ========================================
-regions[header] = Header
-regions[content] = Content
-regions[footer] = Footer
+regions[header] = 'Header'
+regions[content] = 'Content'
+regions[footer] = 'Footer'
 
 ; ========================================
 ; Features
