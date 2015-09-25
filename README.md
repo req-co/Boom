@@ -22,10 +22,10 @@ To Use
 
 -  You will need Node, Gulp, and Bundler
 -  From the command line, cd into your new theme folder
--  Run "sudo bundle install"
--  Run "sudo bundle update"
+-  Run "bundle install"
+-  Run "bundle update"
 -  Run "sudo npm install"
--  Run "npm update caniuse-db"
+-  Run "sudo npm update caniuse-db"
 -  Run "gulp"
 -  To stop watching, use Ctrl+C
 

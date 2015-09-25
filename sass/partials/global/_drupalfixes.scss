@@ -9,14 +9,16 @@
 
 .tabs {
   @extend %clearfix;
+  padding: 0;
   border-bottom: solid 2px #999;
   margin-bottom: 1em;
-  border: 1px solid;
+  border-bottom: 1px solid;
 
   li {
     float: left;
     margin-right: 2px;
     margin-bottom: 0;
+    list-style-type: none;
 
     a {
       display: block;

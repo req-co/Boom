@@ -635,24 +635,6 @@ textarea {
     page-break-after: avoid;
   }
 }
-.monkeysusystuff {
-  max-width: 80em;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid #ff0012;
-}
-.monkeysusystuff:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.monkeysass {
-  width: 25%;
-  float: left;
-  margin-right: 1.69492%;
-}
-
 /**
  *
  * Take any drupal view formatted as Unformatted or HTML List and apply a 3 column grid layout
@@ -717,14 +699,16 @@ body {
 }
 
 .tabs {
+  padding: 0;
   border-bottom: solid 2px #999;
   margin-bottom: 1em;
-  border: 1px solid;
+  border-bottom: 1px solid;
 }
 .tabs li {
   float: left;
   margin-right: 2px;
   margin-bottom: 0;
+  list-style-type: none;
 }
 .tabs li a {
   display: block;
