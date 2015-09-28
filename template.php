@@ -67,3 +67,24 @@ function boom_menu_link(array $variables) {
 // function boom_preprocess_block(&$vars) {
 //   //dsm($vars);
 // }
+
+function boom_preprocess_block(&$vars) {
+  // Make sure that this is a custom block, and not a block that is provided by
+  // a module.
+  if ($vars['block']->module == 'block') {
+    // Load the block information.
+    $info = block_custom_block_get($vars['block']->delta);
+
+    // Trim white space off of block info
+    $block_desc = trim($info['info']);
+
+    // Make lowercase
+    $block_desc = strtolower($block_desc);
+
+    // Replace spaces with hyphens
+    $block_desc_class = drupal_html_class($block_desc);
+
+    // Add block description to the list of classes.
+    $vars['classes_array'][] = $block_desc_class;
+  }
+}
