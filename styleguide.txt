@@ -24,7 +24,7 @@
 <fieldset>
   <legend>Select List and Radio Button Fieldset</legend>
 
-  <div>
+  <div class="webform-component-select">
    <label for="edit-submitted-type-of-event">Type of event </label>
    <select id="edit-submitted-type-of-event" name="submitted[type_of_event]">
      <option value="" selected="selected">- None -</option>
@@ -36,7 +36,7 @@
   </select>
   </div>
 
-  <div>
+  <div class="webform-component-radios">
     <label for="edit-submitted-senate-senate-ct">Connecticut <span class="form-required" title="This field is required.">*</span></label>
     <div>
       <div>
@@ -52,7 +52,7 @@
 
 </fieldset>
 
-<div>
+<div class="webform-component-textfield">
   <label for="edit-submitted-name">Name </label>
   <input title="Name" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128">
 </div>
@@ -68,8 +68,13 @@
 </div>
 
 <div class="form-actions">
-  <input class="webform-submit button-primary form-submit" type="submit" name="op" value="Submit">
-  <input class="webform-submit button-primary form-reset" type="reset" name="op" value="Reset">
+  <input type="submit" name="op" value="Submit">
+  <input type="reset" name="op" value="Reset">
+</div>
+
+<div class="webform-component-textarea">
+  <label for="edit-submitted-long-text">Long Text</label>
+<textarea title="Long Text" id="edit-submitted-long-text" name="submitted[long_text]" cols="60" rows="5"></textarea>
 </div>
 
 </form>
