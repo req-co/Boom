@@ -51,6 +51,12 @@
 @mixin transition($var: all .3s ease) {
   transition: $var;
 }
+/**
+Enable when using the pager CSS in typography partial
+@mixin inline{
+  display: inline;
+}
+*/
 
 /**
  *

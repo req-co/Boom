@@ -44,6 +44,7 @@ a {
 
 }
 
+//Don't forget to enable the @mixin inline in the mixins partial!
 // .pager {
 //   li {
 //     @include inline;
@@ -63,7 +64,7 @@ a {
 //     }
 
 //     a {
-//       display: block;
+//       //display: block;
 //       padding: $small-gap/4 $small-gap*3/4;
 //       text-decoration: none;
 //       color: $text-color;
