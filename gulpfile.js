@@ -2,9 +2,9 @@
 var gulp = require('gulp');
 
 // Include plugins
+var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var compass = require('gulp-compass');
 var jshint = require('gulp-jshint');
 var livereload = require('gulp-livereload');
 var browserify = require('browserify');
@@ -22,22 +22,17 @@ var runExpress = function() {
 };
 
 // Compile Sass, run autoprefixer, and create sourcemaps
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   return gulp.src('sass/**/*.scss')
-  .pipe(compass({
-    css: 'stylesheets',
-    sass: 'sass',
-    require: ['susy', 'modular-scale']
-  }))
-  .on("error", notify.onError("Error: <%= error.message %>"))
-  .pipe(autoprefixer({
-    browsers: ['last 2 versions', 'ie >= 8'],
-    cascade: false
-  }))
-  .pipe(sourcemaps.init())
-  .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest('stylesheets'))
-  .pipe(notify({ message: 'sass task complete' }));
+    .pipe(sass().on("error", notify.onError("Error: <%= error.message %>")))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions', 'ie >= 8'],
+      cascade: false
+    }))
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('stylesheets'))
+    .pipe(notify({ message: 'sass task complete' }));
 });
 
 // Lint JS
