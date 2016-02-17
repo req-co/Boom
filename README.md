@@ -20,7 +20,7 @@ To Use
 
 ---
 
--  You will need Node, Gulp, and Bundler
+-  You will need Node (see installation instructions here: https://nodejs.org) and Gulp (see installation instructions here: http://gulpjs.com/)
 -  From the command line, cd into your new theme folder
 -  Run "sudo npm install"
 -  Run "sudo npm update caniuse-db"
