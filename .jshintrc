@@ -91,6 +91,9 @@
     // Custom Globals
     "globals"       : {
         "module": false,
-        "require": false
+        "require": false,
+        "Drupal": false,
+        "jQuery": false,
+        "$": false
     }        // additional predefined global variables
 }

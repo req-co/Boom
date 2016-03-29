@@ -1,6 +1,8 @@
 // Colors
 $c-black: #000000;
 $c-white: #ffffff;
+$c-off-black: #333333;
+$c-off-white: #efefef;
 
 // Base Font Size
 $base-font-size: 16;
@@ -20,4 +22,5 @@ $max-stage-width: 1024;
 
 $no-query: '.no-mediaqueries';
 
-$small-gap: 1em;
+// Define the icon font name
+$c-font-name: 'boom-icons';

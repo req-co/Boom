@@ -555,12 +555,6 @@ textarea {
     page-break-after: avoid; } }
 
 /**
-Enable when using the pager CSS in typography partial
-@mixin inline{
-  display: inline;
-}
-*/
-/**
  *
  * Take any drupal view formatted as Unformatted or HTML List and apply a 3 column grid layout
  *
@@ -587,11 +581,11 @@ Enable when using the pager CSS in typography partial
  * pass true as the second argument.
  *
  */
-.tabs:before, .clearfix:before, .tabs:after, .clearfix:after {
+.tabs:before, .pager:before, .clearfix:before, .tabs:after, .pager:after, .clearfix:after {
   content: "";
   display: table; }
 
-.tabs:after, .clearfix:after {
+.tabs:after, .pager:after, .clearfix:after {
   clear: both; }
 
 .skip-link, .visuallyhidden {
@@ -613,9 +607,13 @@ body {
   font-weight: 900; }
 
 #admin-menu {
-  z-index: 9999; }
+  z-index: 9999;
+  line-height: 1.4; }
   #admin-menu a {
+    line-height: 1.4;
     -webkit-font-smoothing: subpixel-antialiased; }
+  #admin-menu input {
+    height: 16px; }
 
 .tabs {
   padding: 0;
@@ -624,17 +622,64 @@ body {
   border-bottom: 1px solid; }
   .tabs li {
     float: left;
-    margin-right: 2px;
-    margin-bottom: 0;
-    list-style-type: none; }
+    margin: 0 2px 0 0;
+    list-style-type: none;
+    list-style-image: none;
+    line-height: 1.4;
+    padding-left: 0; }
     .tabs li a {
       display: block;
       padding: 0.5em 1em;
       background-color: #999;
-      color: #fff;
+      color: #ffffff;
       text-decoration: none; }
       .tabs li a:hover, .tabs li a:focus {
-        background-color: #333; }
+        background-color: #666; }
+
+.pager {
+  font-size: 16px;
+  font-size: 1rem;
+  display: block;
+  clear: both;
+  padding: 0.5em 0;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  margin: 2em auto;
+  text-align: center;
+  width: 100%; }
+  .pager .pager-item,
+  .pager .pager-previous,
+  .pager .pager-current,
+  .pager .pager-first,
+  .pager .pager-next,
+  .pager .pager-last,
+  .pager .pager-ellipsis {
+    display: inline;
+    list-style-type: none;
+    list-style-image: none;
+    margin: 0 1em; }
+    .pager .pager-item a,
+    .pager .pager-previous a,
+    .pager .pager-current a,
+    .pager .pager-first a,
+    .pager .pager-next a,
+    .pager .pager-last a,
+    .pager .pager-ellipsis a {
+      text-decoration: none; }
+      .pager .pager-item a:hover, .pager .pager-item a:focus,
+      .pager .pager-previous a:hover,
+      .pager .pager-previous a:focus,
+      .pager .pager-current a:hover,
+      .pager .pager-current a:focus,
+      .pager .pager-first a:hover,
+      .pager .pager-first a:focus,
+      .pager .pager-next a:hover,
+      .pager .pager-next a:focus,
+      .pager .pager-last a:hover,
+      .pager .pager-last a:focus,
+      .pager .pager-ellipsis a:hover,
+      .pager .pager-ellipsis a:focus {
+        text-decoration: underline; }
 
 img {
   max-width: 100%;
@@ -660,21 +705,31 @@ img {
   text-transform: uppercase;
   color: white; }
 
-.movie-wrapper {
-  overflow: hidden;
+.movie-wrapper,
+.youtube {
   position: relative;
   padding-bottom: 56.25%;
+  padding-top: 30px;
   height: 0;
+  overflow: hidden;
   margin-bottom: 2em; }
-  .movie-wrapper iframe {
+  .movie-wrapper iframe,
+  .movie-wrapper object,
+  .movie-wrapper embed,
+  .youtube iframe,
+  .youtube object,
+  .youtube embed {
     position: absolute;
-    height: 100%;
-    width: 100%; }
+    top: 0;
+    left: 0;
+    border: 0;
+    width: 100%;
+    height: 100%; }
 
 @font-face {
-  font-family: 'icon';
-  src: url("../fonts/icon.eot");
-  src: url("../fonts/icon.eot?#iefix") format("embedded-opentype"), url("../fonts/icon.woff") format("woff"), url("../fonts/icon.ttf") format("truetype"), url("../fonts/icon.svg#icon") format("svg");
+  font-family: "boom-icons";
+  src: url("../fonts/boom-icons.eot");
+  src: url("../fonts/boom-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/boom-icons.woff") format("woff"), url("../fonts/boom-icons.ttf") format("truetype"), url("../fonts/boom-icons.svg#icon") format("svg");
   font-weight: normal;
   font-style: normal; }
 

@@ -11,8 +11,10 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 var notify = require('gulp-notify');
 var source = require('vinyl-source-stream');
+var transform = require('vinyl-transform');
 var gutil = require('gulp-util');
 var yargs = require('yargs');
+var concat = require('gulp-concat');
 
 var runExpress = function() {
   var express = require('express');
@@ -43,9 +45,15 @@ gulp.task('lint', function() {
     .pipe(notify({ message: 'Linting complete' }));
 });
 
+gulp.task('concat', function() {
+  return gulp.src('js/es6/*.js')
+    .pipe(concat('concat.js'))
+    .pipe(gulp.dest('js/concat/'));
+});
+
 // Browserify Scripts
 gulp.task('browserify', function() {
-  return browserify('js/es6/main.js', { debug: true })
+  return browserify(['js/concat/concat.js'], { debug: true })
     .transform(babelify)
     .bundle()
     //Pass desired output filename to vinyl-source-stream
@@ -62,6 +70,7 @@ gulp.task('watch', function() {
 
   // Watch .js files
   gulp.watch('js/es6/*.js', ['lint']);
+  gulp.watch('js/es6/*.js', ['concat']);
   gulp.watch('js/es6/*.js', ['browserify']);
 
   // Create LiveReload server
