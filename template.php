@@ -22,6 +22,11 @@ function boom_preprocess_html(&$vars) {
   // else {
   //   $vars['classes_array'][] = 'no-sidebar';
   // }
+
+  if(arg(0) != 'node' && !is_numeric(arg(1))) {
+    $vars['classes_array'][] = 'non-node';
+  }
+
 }
 
 function boom_preprocess_page(&$vars) {
