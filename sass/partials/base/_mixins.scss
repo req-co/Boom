@@ -48,8 +48,8 @@
   transform: $var;
 }
 
-@mixin transition($var: all .3s ease) {
-  transition: $var;
+@mixin transition($property: all, $timing: 300ms, $easing: ease-in-out) {
+  transition: $property $timing $easing;
 }
 /**
 Enable when using the pager CSS in typography partial
